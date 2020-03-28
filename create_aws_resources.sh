@@ -9,4 +9,4 @@ createSQSQueue() {
     aws --endpoint-url=$sqsEndpoint sqs create-queue --queue-name $1 --region us-east-1
 }
 
-createSQSQueue SQSEvents
+createSQSQueue test-queue
