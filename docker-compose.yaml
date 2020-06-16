@@ -17,7 +17,7 @@ services:
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
             KAFKA_MAX_REQUEST_SIZE: 2000000
             KAFKA_MESSAGE_MAX_BYTES: 2000000
-            KAFKA_CREATE_TOPICS: "KafkaEvents:1:1"
+            KAFKA_CREATE_TOPICS: "TestTopic:1:1"
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         depends_on:
@@ -27,7 +27,7 @@ services:
         container_name: localstack
         image: localstack/localstack
         ports:
-            - '4563-4584:4563-4584'
+            # - '4563-4584:4563-4584'
             - '8055:8080'
         environment:
             - SERVICES=sqs
